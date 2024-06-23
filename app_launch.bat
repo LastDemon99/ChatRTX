@@ -47,7 +47,7 @@ if not "%env_path_found%"=="" (
     echo Environment path found: %env_path_found%
     call "%programdata%\MiniConda\Scripts\activate.bat" %env_path_found%
     cd %env_path_found%\..\RAG\trt-llm-rag-windows-ChatRTX_0.3\
-    python app_launch.py
+    python src/app_launch.py
 ) else (
     echo Environment with 'env_nvd_rag' not found.
     pause
