@@ -79,6 +79,7 @@ def save_config(file_path, data):
         return False
 
 # Read the configuration file.
+print("Loading and updating configuration.")
 config = read_config(config_file_path)
 nvmlInit()
 vid_mem_info = nvmlDeviceGetMemoryInfo(nvmlDeviceGetHandleByIndex(0))
@@ -130,7 +131,8 @@ if config:
     # Save the updated configuration back to the file.
     if save_config(config_file_path, config):
         # Print confirmation and the updated configuration.
-        print("App running with config\n", json.dumps(config, indent=4, ensure_ascii=False))
+        #print("App running with config\n", json.dumps(config, indent=4, ensure_ascii=False))
+        print("Updated configuration saved successfully.")
     else:
         # Print an error message if saving fails.
         print("Failed to save the updated configuration.")

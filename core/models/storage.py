@@ -1,3 +1,7 @@
+import warnings
+from langchain._api import LangChainDeprecationWarning
+warnings.simplefilter("ignore", category=LangChainDeprecationWarning)
+
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 from llama_index.chat_engine.types import BaseChatEngine
 from llama_index.core.base_query_engine import BaseQueryEngine
